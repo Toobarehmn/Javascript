@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .asside{
+        height: 400px;
+        width: 300px;
+        border: 2px solid black;
+        background-color: rgb(236, 205, 163);
+        margin-top: 50px;
+    }
+    input{
+        margin-left: 50px;
+    }
+</style>
+<body>
+    <center>
+    <div class="asside">
+        <h1>Currency Converter</h1>
+        <h4 style="text-align: center;">Amount in Pkr</h4>
+        <input type="text" id="pkr">
+        <h4 style="text-align: center;">Amount in Dollar</h4>
+        <input type="text" id="dollar">
+        <h4 style="text-align: center;">Amount in Euros</h4>
+        <input type="text" id="euros">
+        <br><br><br><br>
+        <button style="margin-left: 50px;" onclick="convert()">Convert</button>
+
+    </div>
+    </center>
+    <script>
+        var pkr = document.getElementById('pkr');
+        var dollar = document.getElementById('dollar');
+        var euros = document.getElementById('euros');
+        function convert(){
+            var dol = pkr.value/206;
+            dollar.value = dol;
+            var euro = pkr.value/212.86;
+            euros.value = euro;
+
+        }
+    </script>
+</body>
+</html>
